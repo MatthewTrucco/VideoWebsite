@@ -2,473 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title> Matt's Video Restoration – Vintage Tape & Photo Restoration in Basking Ridge</title>
+  <title>Matt's Video Restoration – Vintage Tape & Photo Restoration in Basking Ridge</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
     content="Local VHS, VHS-C, MiniDV, slide, and photo digitizing and restoration in Basking Ridge. Preserve your family memories before they fade."
   />
-  <style>
-    :root {
-      --bg: #0f172a;
-      --bg-alt: #111827;
-      --accent: #fbbf24;
-      --accent-soft: #fde68a;
-      --text: #f9fafb;
-      --muted: #9ca3af;
-      --card: #1f2937;
-      --max-width: 1100px;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: linear-gradient(135deg, #020617, #111827);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      backdrop-filter: blur(12px);
-      background: rgba(15, 23, 42, 0.9);
-      border-bottom: 1px solid rgba(148, 163, 184, 0.3);
-    }
-
-    .nav-inner {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 0.75rem 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-    }
-
-    .logo {
-      font-weight: 700;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      font-size: 0.9rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .logo span {
-      width: 18px;
-      height: 18px;
-      border-radius: 3px;
-      border: 1px solid var(--accent);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .logo span::before {
-      content: "";
-      position: absolute;
-      width: 150%;
-      height: 2px;
-      transform: rotate(-15deg);
-      top: 40%;
-      left: -20%;
-      background: linear-gradient(to right, transparent, var(--accent), transparent);
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1rem;
-      margin: 0;
-      padding: 0;
-      font-size: 0.9rem;
-    }
-
-    nav li a {
-      color: var(--muted);
-      padding-bottom: 2px;
-      border-bottom: 1px solid transparent;
-    }
-
-    nav li a:hover {
-      color: var(--text);
-      border-color: var(--accent);
-    }
-
-    .nav-cta {
-      padding: 0.45rem 0.9rem;
-      border-radius: 999px;
-      border: 1px solid rgba(251, 191, 36, 0.5);
-      background: rgba(15, 23, 42, 0.8);
-      font-size: 0.85rem;
-      white-space: nowrap;
-    }
-
-    .nav-cta:hover {
-      background: rgba(251, 191, 36, 0.12);
-    }
-
-    main {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 1.5rem;
-      padding-bottom: 3rem;
-    }
-
-    .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
-      gap: 2.5rem;
-      align-items: center;
-      padding: 3rem 0 2rem;
-    }
-
-    .hero-eyebrow {
-      font-size: 0.8rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--accent-soft);
-    }
-
-    h1 {
-      font-size: clamp(2.2rem, 4vw, 3.1rem);
-      margin: 0.5rem 0 0.75rem;
-    }
-
-    .hero-subtitle {
-      color: var(--muted);
-      max-width: 34rem;
-      font-size: 0.98rem;
-    }
-
-    .hero-cta {
-      margin-top: 1.75rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      align-items: center;
-    }
-
-    .btn-primary {
-      padding: 0.9rem 1.5rem;
-      border-radius: 999px;
-      background: var(--accent);
-      color: #1f2937;
-      border: none;
-      font-weight: 600;
-      font-size: 0.95rem;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-    }
-
-    .btn-primary:hover {
-      background: #facc15;
-    }
-
-    .btn-ghost {
-      padding: 0.8rem 1.3rem;
-      border-radius: 999px;
-      background: transparent;
-      border: 1px solid rgba(148, 163, 184, 0.7);
-      color: var(--muted);
-      font-size: 0.9rem;
-      cursor: pointer;
-    }
-
-    .btn-ghost:hover {
-      border-color: var(--accent-soft);
-      color: var(--accent-soft);
-    }
-
-    .hero-note {
-      font-size: 0.8rem;
-      color: var(--muted);
-    }
-
-    .hero-card {
-      background: radial-gradient(circle at top left, rgba(251, 191, 36, 0.12), transparent 55%),
-                  radial-gradient(circle at bottom right, rgba(15, 23, 42, 0.9), #020617 70%);
-      border-radius: 1.5rem;
-      border: 1px solid rgba(148, 163, 184, 0.4);
-      padding: 1.5rem;
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0 24px 60px rgba(15, 23, 42, 0.9);
-    }
-
-    .hero-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      opacity: 0.25;
-      background-image: linear-gradient(
-        rgba(15, 23, 42, 0.9) 1px,
-        transparent 1px
-      ),
-      linear-gradient(
-        90deg,
-        rgba(15, 23, 42, 0.9) 1px,
-        transparent 1px
-      );
-      background-size: 14px 14px;
-      mix-blend-mode: soft-light;
-      pointer-events: none;
-    }
-
-    .hero-card-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 1rem;
-      font-size: 0.85rem;
-      color: var(--muted);
-    }
-
-    .hero-card-chip {
-      border-radius: 999px;
-      padding: 0.2rem 0.6rem;
-      border: 1px solid rgba(148, 163, 184, 0.6);
-      font-size: 0.75rem;
-    }
-
-    .hero-card-title {
-      font-size: 0.95rem;
-      font-weight: 600;
-      margin-bottom: 0.4rem;
-    }
-
-    .media-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      margin-top: 0.6rem;
-      font-size: 0.75rem;
-    }
-
-    .media-tags span {
-      padding: 0.2rem 0.55rem;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.8);
-      border: 1px solid rgba(148, 163, 184, 0.4);
-    }
-
-    .hero-card-footer {
-      margin-top: 1.3rem;
-      font-size: 0.78rem;
-      color: var(--muted);
-      display: flex;
-      justify-content: space-between;
-      gap: 0.75rem;
-      flex-wrap: wrap;
-    }
-
-    section {
-      margin-top: 3rem;
-    }
-
-    .section-label {
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      color: var(--accent-soft);
-    }
-
-    .section-title {
-      font-size: 1.5rem;
-      margin: 0.4rem 0 0.8rem;
-    }
-
-    .section-description {
-      color: var(--muted);
-      font-size: 0.95rem;
-      max-width: 34rem;
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 1.25rem;
-      margin-top: 1.75rem;
-    }
-
-    .card {
-      background: var(--card);
-      border-radius: 1rem;
-      padding: 1.25rem;
-      border: 1px solid rgba(148, 163, 184, 0.4);
-      font-size: 0.9rem;
-    }
-
-    .card h3 {
-      margin-top: 0;
-      margin-bottom: 0.35rem;
-      font-size: 1rem;
-    }
-
-    .card p {
-      margin: 0;
-      color: var(--muted);
-    }
-
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-      gap: 1.25rem;
-      margin-top: 1.5rem;
-    }
-
-    .step-number {
-      width: 24px;
-      height: 24px;
-      border-radius: 999px;
-      border: 1px solid var(--accent);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.75rem;
-      margin-bottom: 0.4rem;
-    }
-
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1.25rem;
-      margin-top: 1.5rem;
-    }
-
-    .price {
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin-bottom: 0.25rem;
-    }
-
-    .price-note {
-      font-size: 0.8rem;
-      color: var(--muted);
-    }
-
-    .faq-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.25rem;
-      margin-top: 1.5rem;
-    }
-
-    .faq-item h3 {
-      font-size: 0.95rem;
-      margin: 0 0 0.35rem;
-    }
-
-    .faq-item p {
-      font-size: 0.9rem;
-      color: var(--muted);
-      margin: 0;
-    }
-
-    .contact-wrapper {
-      display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-      gap: 1.75rem;
-      margin-top: 1.75rem;
-    }
-
-    form {
-      display: grid;
-      gap: 0.75rem;
-      font-size: 0.9rem;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 0.2rem;
-      font-size: 0.85rem;
-    }
-
-    input,
-    textarea {
-      width: 100%;
-      border-radius: 0.6rem;
-      border: 1px solid rgba(148, 163, 184, 0.6);
-      padding: 0.55rem 0.65rem;
-      background: #020617;
-      color: var(--text);
-      font-family: inherit;
-      font-size: 0.9rem;
-    }
-
-    textarea {
-      min-height: 110px;
-      resize: vertical;
-    }
-
-    input:focus,
-    textarea:focus {
-      outline: none;
-      border-color: var(--accent);
-      box-shadow: 0 0 0 1px rgba(251, 191, 36, 0.4);
-    }
-
-    .contact-details {
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
-
-    .contact-details p {
-      margin: 0 0 0.35rem;
-    }
-
-    .contact-highlight {
-      margin-top: 0.7rem;
-      padding: 0.7rem 0.8rem;
-      border-radius: 0.8rem;
-      border: 1px dashed rgba(251, 191, 36, 0.5);
-      background: rgba(15, 23, 42, 0.7);
-      font-size: 0.8rem;
-    }
-
-    footer {
-      border-top: 1px solid rgba(30, 64, 175, 0.7);
-      padding: 1.25rem 1.5rem 2rem;
-      margin-top: 2.5rem;
-      font-size: 0.8rem;
-      color: var(--muted);
-      text-align: center;
-    }
-
-    @media (max-width: 820px) {
-      .hero {
-        grid-template-columns: minmax(0, 1fr);
-        padding-top: 2.5rem;
-      }
-      .hero-card {
-        order: -1;
-      }
-      .contact-wrapper {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      .nav-inner {
-        flex-wrap: wrap;
-      }
-      nav ul {
-        display: none; /* simplify mobile nav for now */
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
   <header>
     <div class="nav-inner">
@@ -481,11 +23,12 @@
           <li><a href="#services">Services</a></li>
           <li><a href="#process">How It Works</a></li>
           <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#estimate">Estimate</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-      <a class="nav-cta" href="tel:5555555555">Call: (908) 875-7199</a>
+      <a class="nav-cta" href="tel:19088757199">Call: (908) 875-7199</a>
     </div>
   </header>
 
@@ -499,11 +42,11 @@
           Matt's Video Restoration carefully restores and digitizes your old VHS, VHS-C, MiniDV tapes, slides, and printed photos—so you can share your family memories on today’s devices.
         </p>
         <div class="hero-cta">
-          <a href="#contact" class="btn-primary">
-            Get a Free Quote
+          <a href="#estimate" class="btn-primary">
+            Get an Estimate
             <span>→</span>
           </a>
-          <a href="tel:5555555555" class="btn-ghost">Call: (908) 875-7199</a>
+          <a href="tel:19088757199" class="btn-ghost">Call: (908) 875-7199</a>
           <div class="hero-note">All work done locally in Basking Ridge. Your originals are always returned.</div>
         </div>
       </div>
@@ -582,7 +125,7 @@
           <div class="step-number">1</div>
           <h3>Drop Off</h3>
           <p>
-            Bring your tapes, slides, and photos to us in Basking Ridge. No shipping for now 
+            Bring your tapes, slides, and photos to us in Basking Ridge. No shipping for now.
           </p>
         </div>
         <div class="card">
@@ -642,6 +185,88 @@
       </div>
     </section>
 
+    <!-- ESTIMATE TOOL -->
+    <section id="estimate">
+      <div class="section-label">Estimate</div>
+      <h2 class="section-title">Instant Price Estimate</h2>
+      <p class="section-description">
+        Enter quantities below to get a quick estimate range (to account for tape length and condition).
+      </p>
+
+      <div class="estimator">
+        <div class="estimator-grid">
+          <div class="card">
+            <h3 style="margin-top:0;">Items</h3>
+
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="vhs">VHS tapes</label>
+                <input id="vhs" type="number" min="0" value="0" />
+              </div>
+
+              <div class="form-field">
+                <label for="vhsc">VHS-C tapes</label>
+                <input id="vhsc" type="number" min="0" value="0" />
+              </div>
+
+              <div class="form-field">
+                <label for="minidv">MiniDV tapes</label>
+                <input id="minidv" type="number" min="0" value="0" />
+              </div>
+
+              <div class="form-field">
+                <label for="slides">Slides (count)</label>
+                <input id="slides" type="number" min="0" value="0" />
+              </div>
+
+              <div class="form-field">
+                <label for="photos">Photos (count)</label>
+                <input id="photos" type="number" min="0" value="0" />
+              </div>
+            </div>
+
+            <div class="checkbox-row">
+              <label class="check">
+                <input id="usb" type="checkbox" />
+                USB delivery (+$10)
+              </label>
+
+              <label class="check">
+                <input id="rush" type="checkbox" />
+                Rush service (+20%)
+              </label>
+            </div>
+
+            <div class="estimate-actions">
+              <button class="btn-primary" id="calcBtn" type="button">Calculate</button>
+              <button class="btn-ghost" id="copyBtn" type="button">Copy Summary</button>
+              <button class="btn-ghost" id="resetBtn" type="button">Reset</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 style="margin-top:0;">Results</h3>
+
+            <div class="result-line">
+              <div class="result-label">Estimated range</div>
+              <div class="result-value" id="rangeOut">$0 – $0</div>
+            </div>
+
+            <div class="result-line">
+              <div class="result-label">Estimated total (mid)</div>
+              <div class="result-value" id="totalOut">$0</div>
+            </div>
+
+            <p class="hero-note" id="disclaimerOut" style="margin-top:0.75rem;">
+              This is a quick estimate range. Final price can change if tapes are extra-long or heavily damaged.
+            </p>
+
+            <pre class="summary" id="summaryOut"></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ABOUT / FAQ -->
     <section id="faq">
       <div class="section-label">About & FAQ</div>
@@ -688,7 +313,6 @@
 
       <div class="contact-wrapper">
         <div>
-          <!-- NOTE: action can be wired up to Formspree or similar service -->
           <form method="post" action="mailto:awhtulips07@gmail.com" enctype="text/plain">
             <div>
               <label for="name">Name</label>
@@ -712,10 +336,10 @@
 
         <div class="contact-details">
           <p><strong>Phone:</strong> (908) 875-7199</p>
-          <p><strong>Email:</strong> youremail@example.com</p>
-          <p><strong>Location:</strong> Basking Ridge, New Jersey </p>
+          <p><strong>Email:</strong> awhtulips07@gmail.com</p>
+          <p><strong>Location:</strong> Basking Ridge, New Jersey</p>
           <div class="contact-highlight">
-            Prefer texting or sending photos of your tapes first?  
+            Prefer texting or sending photos of your tapes first?
             Text us at (908) 875-7199 with a quick picture of what you have and we’ll help you estimate the cost.
           </div>
         </div>
@@ -727,9 +351,6 @@
     © <span id="year"></span> Matt's Video Restoration · Vintage Tape & Photo Restoration in Basking Ridge
   </footer>
 
-  <script>
-    // Set current year automatically
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script src="app.js" defer></script>
 </body>
 </html>
