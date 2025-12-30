@@ -293,11 +293,12 @@
     </p>
 
     <form
-      name="reviews"
-      method="POST"
-      data-netlify="true"
-      data-netlify-honeypot="bot-field"
-    >
+  name="reviews"
+  method="POST"
+  data-netlify="true"
+  data-netlify-honeypot="bot-field"
+  action="/?review=success#reviews"
+>
       <input type="hidden" name="form-name" value="reviews" />
 
       <!-- Honeypot spam field -->
@@ -307,6 +308,12 @@
           <input name="bot-field" />
         </label>
       </p>
+
+      <div id="reviewSuccess" class="card" style="display:none; margin-bottom:1rem;">
+  <p class="hero-note">
+    ✅ Thank you! Your review has been submitted and is pending approval.
+  </p>
+</div>
 
       <div class="form-grid">
         <div class="form-field">

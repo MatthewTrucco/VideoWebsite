@@ -141,3 +141,11 @@ document.addEventListener("DOMContentLoaded", () => {
   // Estimator
   setupEstimator();
 });
+// Show review success message after Netlify redirect
+document.addEventListener("DOMContentLoaded", () => {
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("review") === "success") {
+    const msg = document.getElementById("reviewSuccess");
+    if (msg) msg.style.display = "block";
+  }
+});
