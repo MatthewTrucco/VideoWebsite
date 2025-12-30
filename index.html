@@ -20,6 +20,7 @@
       </div>
       <nav>
         <ul>
+          <li><a href="#reviews">Reviews</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#process">How It Works</a></li>
           <li><a href="#pricing">Pricing</a></li>
@@ -266,6 +267,94 @@
         </div>
       </div>
     </section>
+<!-- REVIEWS -->
+<section id="reviews">
+  <div class="section-label">Reviews</div>
+  <h2 class="section-title">What Customers Are Saying</h2>
+  <p class="section-description">
+    We’re proud to help families in Basking Ridge preserve irreplaceable memories.
+  </p>
+
+  <!-- Approved Reviews (YOU add these manually) -->
+  <div class="reviews-grid">
+    <div class="review card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">
+        Matt did an incredible job restoring our old VHS tapes.
+        Everything was clear, organized, and handled with care.
+      </p>
+      <div class="review-author">
+        — Sarah M., Basking Ridge NJ
+      </div>
+    </div>
+
+    <div class="review card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">
+        Honest pricing, fast turnaround, and excellent quality.
+        Highly recommend for anyone with old family videos.
+      </p>
+      <div class="review-author">
+        — Tom R., Bernards Township
+      </div>
+    </div>
+  </div>
+
+  <!-- Review Submission Form (Moderated & Spam-Protected) -->
+  <div class="card review-form" style="margin-top:2rem;">
+    <h3 style="margin-top:0;">Leave a Review</h3>
+    <p class="hero-note">
+      Reviews are moderated before appearing publicly.
+    </p>
+
+    <form
+      name="reviews"
+      method="POST"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+    >
+      <input type="hidden" name="form-name" value="reviews" />
+
+      <!-- Honeypot spam field -->
+      <p style="display:none;">
+        <label>
+          Don’t fill this out:
+          <input name="bot-field" />
+        </label>
+      </p>
+
+      <div class="form-grid">
+        <div class="form-field">
+          <label>Name</label>
+          <input name="name" type="text" required />
+        </div>
+
+        <div class="form-field">
+          <label>Location (optional)</label>
+          <input name="location" type="text" placeholder="Basking Ridge, NJ" />
+        </div>
+
+        <div class="form-field">
+          <label>Rating</label>
+          <select name="rating" required>
+            <option value="5">★★★★★ (5)</option>
+            <option value="4">★★★★☆ (4)</option>
+            <option value="3">★★★☆☆ (3)</option>
+            <option value="2">★★☆☆☆ (2)</option>
+            <option value="1">★☆☆☆☆ (1)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label>Your Review</label>
+        <textarea name="review" required></textarea>
+      </div>
+
+      <button type="submit" class="btn-primary">Submit Review</button>
+    </form>
+  </div>
+</section>
 
     <!-- ABOUT / FAQ -->
     <section id="faq">
