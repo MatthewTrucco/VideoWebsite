@@ -1,8 +1,8 @@
 // ===== Pricing (edit these anytime) =====
 const PRICING = {
-  vhs: 25,
-  vhsc: 25,
-  minidv: 25,
+  vhs: 20,
+  vhsc: 20,
+  minidv: 20,
   slides: 0.80,
   photos: 1.00,
   usbFlat: 10,
